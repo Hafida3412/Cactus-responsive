@@ -1,819 +1,820 @@
 /*=============== GOOGLE FONTS ===============*/
+/* Importation de la police Montserrat depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(93, 54%, 54%);
-  --first-color-alt: hsl(93, 50%, 48%);
-  --first-color-light: hsl(93, 58%, 66%);
-  --title-color: hsl(228, 8%, 98%);
-  --text-color: hsl(228, 8%, 70%);
-  --white-color: hsl(228, 8%, 98%);
-  --black-color: hsl(228, 6%, 4%);
-  --body-color: hsl(228, 6%, 8%);
-  --container-color: hsl(228, 6%, 12%);
-  --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
-  --gradient-card: linear-gradient(180deg,
-                                hsla(93, 8%, 8%),
-                                hsla(93, 40%, 30%));
+  --header-height: 3.5rem; /* Hauteur de l'en-tête */
+  
+  /*========== Couleurs ==========*/
+  /* Mode de couleur HSL (teinte, saturation, luminosité) */
+  --first-color: hsl(93, 54%, 54%); /* Première couleur principale */
+  --first-color-alt: hsl(93, 50%, 48%); /* Couleur alternative */
+  --first-color-light: hsl(93, 58%, 66%); /* Variante plus claire de la première couleur */
+  --title-color: hsl(228, 8%, 98%); /* Couleur des titres */
+  --text-color: hsl(228, 8%, 70%); /* Couleur du texte */
+  --white-color: hsl(228, 8%, 98%); /* Couleur blanche */
+  --black-color: hsl(228, 6%, 4%); /* Couleur noire */
+  --body-color: hsl(228, 6%, 8%); /* Couleur de fond du corps */
+  --container-color: hsl(228, 6%, 12%); /* Couleur de fond des conteneurs */
+  --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4); /* Ombre des images */
+  --gradient-card: linear-gradient(180deg, hsla(93, 8%, 8%), hsla(93, 40%, 30%)); /* Dégradé des cartes */
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat", sans-serif;
-  --biggest-font-size: 2.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  /*========== Police et typographie ==========*/
+  /* .5rem = 8px | 1rem = 16px ... */
+  --body-font: "Montserrat", sans-serif; /* Police principale */
+  --biggest-font-size: 2.25rem; /* Taille de police pour les plus grands textes */
+  --h1-font-size: 1.5rem; /* Taille de police pour h1 */
+  --h2-font-size: 1.25rem; /* Taille de police pour h2 */
+  --h3-font-size: 1rem; /* Taille de police pour h3 */
+  --normal-font-size: .938rem; /* Taille de police normale */
+  --small-font-size: .813rem; /* Taille de police petite */
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --font-bold: 700;
+  /*========== Poids de la police ==========*/
+  --font-regular: 400; /* Poids normal */
+  --font-semi-bold: 600; /* Semi-gras */
+  --font-bold: 700; /* Gras */
 
   /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-tooltip: 10; /* Z-index pour les tooltips */
+  --z-fixed: 100; /* Z-index pour les éléments fixés */
 }
 
-/*========== Responsive typography ==========*/
+/*========== Typographie responsive ==========*/
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 4.25rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
+    --biggest-font-size: 4.25rem; /* Taille de police pour les grands écrans */
+    --h1-font-size: 2.25rem; 
+    --h2-font-size: 1.5rem; 
+    --h3-font-size: 1.25rem; 
+    --normal-font-size: 1rem; 
+    --small-font-size: .875rem; 
   }
 }
 
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box; /* Box-sizing pour inclure padding et bordure dans la largeur/hauteur */
+  padding: 0; /* Réinitialisation du padding */
+  margin: 0; /* Réinitialisation de la marge */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Ajout d'un défilement fluide */
 }
 
 body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+  font-family: var(--body-font); /* Application de la police principale */
+  font-size: var(--normal-font-size); /* Application de la taille de police normale */
+  background-color: var(--body-color); /* Fond du corps */
+  color: var(--text-color); /* Couleur du texte */
 }
 
 h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  color: var(--title-color); /* Couleur des titres */
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour les titres */
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* Suppression des styles de liste par défaut */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Suppression du soulignement des liens */
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  display: block; /* Images en mode bloc */
+  max-width: 100%; /* Largeur maximale des images */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== CLASSES CSS RÉUTILISABLES ===============*/
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+  max-width: 1120px; /* Largeur maximale du conteneur */
+  margin-inline: 1.5rem; /* Marge horizontale */
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+  display: grid; /* Affichage en grille */
+  gap: 1.5rem; /* Espacement entre les éléments de la grille */
 }
 
 .section {
-  padding-block: 5rem 1rem;
+  padding-block: 5rem 1rem; /* Espacement vertical des sections */
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-bold);
-  text-align: center;
-  margin-bottom: 1rem;
+  font-size: var(--h1-font-size); /* Taille de la police du titre de section */
+  font-weight: var(--font-bold); /* Poids gras pour le titre de section */
+  text-align: center; /* Alignement centré */
+  margin-bottom: 1rem; /* Marge inférieure */
 }
 
 .main {
-  overflow: hidden;
+  overflow: hidden; /* Masquer le débordement */
 }
 
-/*=============== HEADER & NAV ===============*/
+/*=============== EN-TÊTE ET NAVIGATION ===============*/
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: var(--z-fixed);
+  position: fixed; /* Position fixe de l'en-tête */
+  width: 100%; /* Largeur pleine */
+  top: 0; /* Aligné en haut */
+  left: 0; /* Aligné à gauche */
+  background-color: transparent; /* Fond transparent */
+  z-index: var(--z-fixed); /* Z-index pour l'en-tête */
 }
 
 .nav {
-  position: relative;
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative; /* Position relative pour la navigation */
+  height: var(--header-height); /* Hauteur de la barre de navigation */
+  display: flex; /* Flexbox pour la navigation */
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Alignement vertical centré */
 }
 
 .nav__logo,
 .nav__close,
 .nav__toggle,
 .nav__actions {
-  display: flex;
-  color: var(--title-color);
-  cursor: pointer;
+  display: flex; /* Affichage flex pour les éléments */
+  color: var(--title-color); /* Couleur du texte */
+  cursor: pointer; /* Curseur en forme de pointeur */
 }
 
 .nav__logo {
-  font-weight: var(--font-semi-bold);
-  column-gap: .25rem;
-  align-items: center;
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour le logo */
+  column-gap: .25rem; /* Espacement entre les éléments du logo */
+  align-items: center; /* Alignement des éléments du logo */
 }
 
 .nav__logo i {
-  color: var(--first-color);
-  font-size: 1.25rem;
-  font-weight: initial;
+  color: var(--first-color); /* Couleur de l'icône du logo */
+  font-size: 1.25rem; /* Taille de la police de l'icône */
+  font-weight: initial; /* Poids de police initial pour l'icône */
 }
 
 .nav__actions {
-  font-size: 1.25rem;
-  column-gap: .5rem;
-  align-items: center;
+  font-size: 1.25rem; /* Taille de police pour les actions de navigation */
+  column-gap: .5rem; /* Espacement entre les actions */
+  align-items: center; /* Alignement vertical centré */
 }
 
-/* Navigation for mobile devices */
-
+/* Navigation pour les appareils mobiles */
 @media screen and (max-width: 1150px) {
   .nav__menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: hsla(228, 24%, 6%, .2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    width: 80%;
-    height: 100%;
-    padding: 6rem 3rem 0;
-    transition: right .4s;
+    position: fixed; /* Menu fixe pour la navigation */
+    top: 0; /* Aligné en haut */
+    right: -100%; /* Hors de l'écran à droite */
+    background-color: hsla(228, 24%, 6%, .2); /* Couleur de fond avec transparence */
+    backdrop-filter: blur(16px); /* Flou de fond */
+    -webkit-backdrop-filter: blur(16px); /* Flou webkit */
+    width: 80%; /* Largeur du menu */
+    height: 100%; /* Hauteur pleine */
+    padding: 6rem 3rem 0; /* Espacement interne */
+    transition: right .4s; /* Transition pour l'ouverture du menu */
   }
 }
 
 .nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
+  display: flex; /* Affichage flex pour la liste de navigation */
+  flex-direction: column; /* Orientation verticale des éléments */
+  row-gap: 3rem; /* Espacement vertical */
 }
 
 .nav__link {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  transition: color .4s;
+  color: var(--title-color); /* Couleur des liens de navigation */
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour les liens */
+  transition: color .4s; /* Transition de couleur au survol */
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Couleur au survol */
 }
 
 .nav__close {
-  position: absolute;
-  top: 1.15rem;
-  right: 1.5rem;
-  font-size: 1.25rem;
+  position: absolute; /* Position absolue pour le bouton de fermeture */
+  top: 1.15rem; /* Aligné en haut */
+  right: 1.5rem; /* Aligné à droite */
+  font-size: 1.25rem; /* Taille de la police du bouton de fermeture */
 }
-/* Show menu */
+
+/* Afficher le menu */
 .show-menu {
-  right: 0;
+  right: 0; /* Remettre le menu à son emplacement */
 }
 
-/* Add blur header */
+/* Ajouter un flou à l'en-tête */
 .blur-header::after {
-  content: '';
-  position: absolute;
-  width: 1000%;
-  height: 100%;
-  background-color: hsla(228, 24%, 6%, .2);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  top: 0;
-  left: 0;
-  z-index: -1;
+  content: ''; /* Contenu vide pour l'élément pseudo */
+  position: absolute; /* Position absolue pour le flou */
+  width: 1000%; /* Largeur excessive pour couvrir */
+  height: 100%; /* Hauteur pleine */
+  background-color: hsla(228, 24%, 6%, .2); /* Couleur de fond avec transparence */
+  backdrop-filter: blur(16px); /* Flou de fond */
+  -webkit-backdrop-filter: blur(16px); /* Flou webkit */
+  top: 0; /* Aligné en haut */
+  left: 0; /* Aligné à gauche */
+  z-index: -1; /* Z-index négatif pour placer derrière */
 }
 
-/* Active link */
+/* Lien actif */
 .active-link {
-  color: var(--first-color);
+  color: var(--first-color); /* Couleur pour le lien actif */
 }
 
-/*=============== HOME ===============*/
+/*=============== ACCUEIL ===============*/
 .home__container {
-  padding-top: 2.5rem;
-  row-gap: 2rem;
+  padding-top: 2.5rem; /* Espacement supérieur */
+  row-gap: 2rem; /* Espacement entre lignes */
 }
 
 .home__img {
-  width: 270px;
-  filter: drop-shadow(var(--shadow-img));
-  justify-self: center;
+  width: 270px; /* Largeur de l'image d'accueil */
+  filter: drop-shadow(var(--shadow-img)); /* Ombre portée */
+  justify-self: center; /* Justification au centre */
 }
 
 .home__data {
-  text-align: center;
+  text-align: center; /* Alignement du texte au centre */
 }
 
 .home__title {
-  font-style: var(--biggest-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: 1rem;
+  font-style: var(--biggest-font-size); /* Taille de la police pour le titre d'accueil */
+  font-weight: var(--font-bold); /* Poids gras pour le titre */
+  margin-bottom: 1rem; /* Marge inférieure */
 }
 
 .home__title span {
-  color: var(--first-color);
-  margin-bottom: 3rem;
+  color: var(--first-color); /* Couleur pour une partie du titre */
+  margin-bottom: 3rem; /* Marge inférieure */
 }
 
 .home__description {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; /* Marge inférieure pour la description */
 }
 
 .home__buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: .5rem;
+  display: flex; /* Affichage flex pour les boutons */
+  justify-content: center; /* Alignement centré */
+  align-items: center; /* Alignement vertical centré */
+  column-gap: .5rem; /* Espacement entre les boutons */
 }
 
-/*=============== BUTTON ===============*/
+/*=============== BOUTON ===============*/
 .button{
-  background-color: var(--white-color);
-  color: var(--black-color);
-  font-weight: var(--font-bold);
-  padding: .5rem 1.5rem .5rem .5rem;
-  border-radius: 4rem;
-  display: inline-flex;
-  align-items: center;
-  column-gap: .75rem;
+  background-color: var(--white-color); /* Couleur de fond du bouton */
+  color: var(--black-color); /* Couleur du texte du bouton */
+  font-weight: var(--font-bold); /* Poids gras pour le texte du bouton */
+  padding: .5rem 1.5rem .5rem .5rem; /* Espacement intérieur */
+  border-radius: 4rem; /* Coins arrondis */
+  display: inline-flex; /* Affichage en flex pour les éléments en ligne */
+  align-items: center; /* Alignement vertical centré */
+  column-gap: .75rem; /* Espacement entre les éléments dans le bouton */
 }
 
 .button span {
-  background-color: var(--first-color);
-  padding: .5rem;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: transform .4s;
+  background-color: var(--first-color); /* Couleur de fond pour le span du bouton */
+  padding: .5rem; /* Espacement intérieur */
+  font-size: 1.25rem; /* Taille de police du span */
+  border-radius: 50%; /* Coins ronds */
+  display: grid; /* Affichage en grille pour centrer */
+  place-items: center; /* Centrer le contenu */
+  transition: transform .4s; /* Transition pour transformation */
 }
 
 .button:hover span {
-  transform: translateX(.15rem) rotate(-30deg)
+  transform: translateX(.15rem) rotate(-30deg) /* Effet de transformation au survol */
 }
 
 .button__link {
-  color: var(--white-color);
-  font-weight: var(--font-bold);
-  text-decoration: underline;
-  transition: color .4s;
+  color: var(--white-color); /* Couleur pour le lien du bouton */
+  font-weight: var(--font-bold); /* Poids gras pour le texte du lien */
+  text-decoration: underline; /* Soulignement pour le lien */
+  transition: color .4s; /* Transition de couleur au survol */
 }
 
 .button__link:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Couleur au survol */
 }
 
-/*=============== NEWS ===============*/
+/*=============== NOUVELLES ===============*/
 .new__data{
-  text-align: center;
+  text-align: center; /* Alignement du texte au centre */
 }
 
 .new__container {
-  row-gap: 7.5rem;
+  row-gap: 7.5rem; /* Espacement entre lignes */
 }
 
 .new__content {
-  row-gap: 6rem;
+  row-gap: 6rem; /* Espacement entre lignes dans le contenu */
 }
 
 .new__card {
-  position: relative;
-  width: 200px;
-  background: var(--gradient-card);
-  padding: 9rem .75rem 1.5rem .75rem;
-  border: 2px solid var(--first-color-light);
-  border-radius: 1.5rem;
+  position: relative; /* Position relative pour la carte */
+  width: 200px; /* Largeur de la carte */
+  background: var(--gradient-card); /* Dégradé de fond */
+  padding: 9rem .75rem 1.5rem .75rem; /* Espacement intérieur */
+  border: 2px solid var(--first-color-light); /* Bordure autour de la carte */
+  border-radius: 1.5rem; /* Coins arrondis */
 }
 
 .new__img {
-  position: absolute;
-  top: -4.5rem;
-  left: 0;
-  right: 0;
-  width: 180px;
-  margin: 0 auto;
-  transition: transform .4s;
+  position: absolute; /* Position absolue pour l'image */
+  top: -4.5rem; /* Alignement vers le haut */
+  left: 0; /* Aligné à gauche */
+  right: 0; /* Aligné à droite */
+  width: 180px; /* Largeur de l'image */
+  margin: 0 auto; /* Centrage horizontal */
+  transition: transform .4s; /* Transition pour transformation */
 }
 
 .new__title {
-  font-size: var(--h2-font-size);
-  text-align: center;
+  font-size: var(--h2-font-size); /* Taille de police pour le titre de la carte */
+  text-align: center; /* Alignement du texte au centre */
 }
 
 .new__card:nth-child(odd){
-  rotate: -5deg;
+  rotate: -5deg; /* Rotation pour les cartes impaires */
 }
 
 .new__card:nth-child(even) {
-  justify-self: flex-end;
-  rotate: 5deg;
+  justify-self: flex-end; /* Alignement vers la droite pour les cartes paires */
+  rotate: 5deg; /* Rotation pour les cartes paires */
 }
 
 .new__card:hover .new__img{
-  transform: translateY(-.5rem);
+  transform: translateY(-.5rem); /* Déplacement vers le haut au survol */
 }
 
-/*=============== SHOP ===============*/
+/*=============== BOUTIQUE ===============*/
 .shop__container {
-  padding-top: 6.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6rem 1.5rem;
+  padding-top: 6.5rem; /* Espacement supérieur */
+  grid-template-columns: repeat(2, 1fr); /* Grille à deux colonnes */
+  gap: 6rem 1.5rem; /* Espacement entre les colonnes et lignes */
 }
 
 .shop__card {
-  position: relative;
-  background: var(--gradient-card);
-  padding: 5.75rem .75rem 1.25rem .75rem;
-  border: 2px solid var(--first-color-light);
-  border-radius: 1rem;
+  position: relative; /* Position relative pour la carte du magasin */
+  background: var(--gradient-card); /* Dégradé de fond */
+  padding: 5.75rem .75rem 1.25rem .75rem; /* Espacement intérieur */
+  border: 2px solid var(--first-color-light); /* Bordure autour de la carte */
+  border-radius: 1rem; /* Coins arrondis */
 }
 
 .shop__img {
-  position: absolute;
-  top: -4.5rem;
-  left: 0;
-  right: 0;
-  width: 130px;
-  margin: 0 auto;
-  transition: transform .4s;
+  position: absolute; /* Position absolue pour l'image */
+  top: -4.5rem; /* Alignement vers le haut */
+  left: 0; /* Aligné à gauche */
+  right: 0; /* Aligné à droite */
+  width: 130px; /* Largeur de l'image */
+  margin: 0 auto; /* Centrage horizontal */
+  transition: transform .4s; /* Transition pour transformation */
 }
 
 .shop__title {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: .5rem;
+  font-size: var(--small-font-size); /* Taille de la police pour le titre */
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour le titre */
+  margin-bottom: .5rem; /* Marge inférieure */
 }
 
 .shop__price {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  color: var(--title-color); /* Couleur du prix */
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour le prix */
 }
 
 .shop__button {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  outline: none;
-  border: none;
-  background-color: var(--white-color);
-  padding: 6px;
-  border-radius: 50%;
-  font-size: 1.25rem;
-  display: grid;
-  cursor: pointer;
+  position: absolute; /* Position absolue pour le bouton de la carte */
+  right: 0.75rem; /* Alignement à droite */
+  bottom: 0.75rem; /* Alignement en bas */
+  outline: none; /* Pas de contour */
+  border: none; /* Pas de bordure */
+  background-color: var(--white-color); /* Couleur de fond */
+  padding: 6px; /* Espacement intérieur */
+  border-radius: 50%; /* Coins ronds pour le bouton */
+  font-size: 1.25rem; /* Taille de police du bouton */
+  display: grid; /* Affichage en grille */
+  cursor: pointer; /* Curseur en forme de pointeur */
 }
 
 .shop__card:hover .shop__img {
-  transform: translateY(-.5rem);
+  transform: translateY(-.5rem); /* Déplacement vers le haut au survol */
 }
-/*=============== CARE ===============*/
+
+/*=============== SOINS ===============*/
 .care__container {
-  padding-top: 2rem;
-  row-gap: 2rem;
+  padding-top: 2rem; /* Espacement supérieur */
+  row-gap: 2rem; /* Espacement entre lignes */
 }
 
 .care__img {
-  width: 270px;
-  filter: drop-shadow(var(--shadow-img));
-  justify-self: center;
+  width: 270px; /* Largeur de l'image de soins */
+  filter: drop-shadow(var(--shadow-img)); /* Ombre portée */
+  justify-self: center; /* Justification au centre */
 }
 
 .care__list {
-  display: grid;
-  row-gap: 1rem;
+  display: grid; /* Affichage en grille pour la liste */
+  row-gap: 1rem; /* Espacement entre lignes */
 }
 
 .care__item {
-  display: flex;
-  column-gap: .5rem;
-  align-items: flex-start;
+  display: flex; /* Affichage flex pour les éléments de soins */
+  column-gap: .5rem; /* Espacement entre les éléments */
+  align-items: flex-start; /* Alignement en haut pour les éléments */
 }
 
 .care__item i {
-  font-size: 1.5rem;
-  color: var(--first-color);
+  font-size: 1.5rem; /* Taille de police pour l'icône des soins */
+  color: var(--first-color); /* Couleur de l'icône */
 }
 
 /*=============== CONTACT ===============*/
 .contact__container {
-  padding-top: 2rem;
-  row-gap: 2rem;
+  padding-top: 2rem; /* Espacement supérieur */
+  row-gap: 2rem; /* Espacement entre lignes */
 }
 
 .contact__img {
-  width: 270px;
-  filter: drop-shadow(var(--shadow-img));
-  justify-self: center;
+  width: 270px; /* Largeur de l'image de contact */
+  filter: drop-shadow(var(--shadow-img)); /* Ombre portée */
+  justify-self: center; /* Justification au centre */
 }
 
 .contact__content {
-  display: grid;
-  row-gap: 2rem;
-  text-align: center;
+  display: grid; /* Affichage en grille pour le contenu */
+  row-gap: 2rem; /* Espacement entre lignes */
+  text-align: center; /* Alignement au centre */
 }
 
 .contact__title {
-  font-size: var(--h2-font-size);
-  margin-bottom: .5rem;
+  font-size: var(--h2-font-size); /* Taille de police pour le titre de contact */
+  margin-bottom: .5rem; /* Marge inférieure */
 }
 
 .contact__social {
-  display: flex;
-  justify-content: center;
-  column-gap: .75rem;
+  display: flex; /* Affichage flex pour les réseaux sociaux */
+  justify-content: center; /* Alignement centré */
+  column-gap: .75rem; /* Espacement entre les éléments */
 }
 
 .contact__social a {
-  color: var(--first-color);
-  font-size: 1.5rem;
+  color: var(--first-color); /* Couleur des liens des réseaux sociaux */
+  font-size: 1.5rem; /* Taille de police pour les icônes */
 }
 
 .contact__info {
-  font-style: normal;
+  font-style: normal; /* Style normal pour l'information de contact */
 }
 
-/*=============== FOOTER ===============*/
+/*=============== PIED DE PAGE ===============*/
 .footer {
-  padding-block: 4rem 2rem;
+  padding-block: 4rem 2rem; /* Espacement supérieur et inférieur */
 }
 
 .footer__container {
-  row-gap: 4rem;
+  row-gap: 4rem; /* Espacement entre lignes */
 }
 
 .footer__logo {
-  display: inline-flex;
-  align-items: center;
-  column-gap: .25rem;
-  color: var(--title-color);
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: .75rem;
+  display: inline-flex; /* Affichage en flex pour le logo du pied de page */
+  align-items: center; /* Alignement vertical centré */
+  column-gap: .25rem; /* Espacement entre les éléments du logo */
+  color: var(--title-color); /* Couleur des titres */
+  font-size: var(--h2-font-size); /* Taille de police du logo */
+  font-weight: var(--font-semi-bold); /* Poids semi-gras pour le logo */
+  margin-bottom: .75rem; /* Marge inférieure */
 }
 
 .footer__logo i {
-  color: var(--first-color);
-  font-size: 1.5rem;
-  font-weight: initial;
+  color: var(--first-color); /* Couleur de l'icône du logo */
+  font-size: 1.5rem; /* Taille de police de l'icône */
+  font-weight: initial; /* Poids de police initial pour l'icône */
 }
 
 .footer__content {
-  grid-template-columns: repeat(2, max-content);
-  gap: 4rem 3rem;
+  grid-template-columns: repeat(2, max-content); /* Grille pour le contenu */
+  gap: 4rem 3rem; /* Espacement entre colonnes et lignes */
 }
 
 .font__title {
-  font-size: var(--normal-font-size);
-  margin-bottom: 1rem;
+  font-size: var(--normal-font-size); /* Taille de police pour les titres des liens */
+  margin-bottom: 1rem; /* Marge inférieure */
 }
 
 .footer__links {
-  display: grid;
-  row-gap: .75rem;
+  display: grid; /* Affichage en grille pour les liens */
+  row-gap: .75rem; /* Espacement entre lignes */
 }
 
 .footer__link {
-  color: var(--text-color);
-  transition: color .4s;
+  color: var(--text-color); /* Couleur du lien */
+  transition: color .4s; /* Transition de couleur au survol */
 }
 
 .footer__social {
-  display: flex;
-  column-gap: .75rem;
+  display: flex; /* Affichage flex pour les réseaux sociaux */
+  column-gap: .75rem; /* Espacement entre les éléments */
 }
 
 .footer__social {
-  color: var(--text-color);
-  font-size: 1.5rem;
-  transition: color .4s;
+  color: var(--text-color); /* Couleur des icônes de réseaux sociaux */
+  font-size: 1.5rem; /* Taille de police des icônes */
+  transition: color .4s; /* Transition de couleur au survol */
 }
 
 .footer__link:hover,
 .footer__social-link:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Couleur au survol des liens */
 }
 
 .footer__copy {
-  display: block;
-  margin-top: 6rem;
-  text-align: center;
-  font-size: var(--small-font-size);
+  display: block; /* Affichage block pour le texte du copyright */
+  margin-top: 6rem; /* Marge supérieure */
+  text-align: center; /* Alignement centré */
+  font-size: var(--small-font-size); /* Taille de police pour le copyright */
 }
 
-/*=============== SCROLL BAR ===============*/
+/*=============== BARRE DE DÉFILEMENT ===============*/
 ::-webkit-scrollbar{
-  width: .6rem;
-  background-color: hsl(129, 86%, 19%);
+  width: .6rem; /* Largeur de la barre de défilement */
+  background-color: hsl(129, 86%, 19%); /* Couleur de fond de la barre */
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: hsl(129, 86%, 29%);
+  background-color: hsl(129, 86%, 29%); /* Couleur de la poignée de défilement */
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background-color: hsl(129, 86%, 39%);
+  background-color: hsl(129, 86%, 39%); /* Couleur de la poignée au survol */
 }
 
-/*=============== SCROLL UP ===============*/
+/*=============== DÉFILEMENT VERS LE HAUT ===============*/
 .scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -50%;
-  background-color: var(--container-color);
-  color: var(--title-color);
-  box-shadow: 0 12px 24px hsl(228, 48%, 4%, .5);
-  padding: 6px;
-  font-size: 1.25rem;
-  z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s;
+  position: fixed; /* Position fixe pour le bouton de retour en haut */
+  right: 1rem; /* Aligné à droite */
+  bottom: -50%; /* Hors de l'écran en bas */
+  background-color: var(--container-color); /* Couleur de fond du bouton */
+  color: var(--title-color); /* Couleur du texte du bouton */
+  box-shadow: 0 12px 24px hsl(228, 48%, 4%, .5); /* Ombre portée du bouton */
+  padding: 6px; /* Espacement intérieur */
+  font-size: 1.25rem; /* Taille de police du bouton */
+  z-index: var(--z-tooltip); /* Z-index pour le bouton */
+  transition: bottom .4s, transform .4s; /* Transition pour afficher/masquer */
 }
 
 .scrollup:hover {
-  transform: translateY(-.5rem);
+  transform: translateY(-.5rem); /* Effet de déplacement au survol */
 }
-/* Show Scroll Up */
+
+/* Afficher le bouton de défilement vers le haut */
 .show-scroll {
-  bottom: 3rem;
+  bottom: 3rem; /* Remettre le bouton à l'emplacement visible */
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/*=============== POINTS DE RUPTURE ===============*/
+/* Pour petits appareils */
 @media screen and (max-width: 320px) {
-.container {
-  margin-inline: 1rem;
-}
-.home__title {
-  font-size: 2rem;
-}
-.home__buttons{
-  flex-direction: column;
-  row-gap: 1.5rem;
+  .container {
+    margin-inline: 1rem; /* Marge horizontale pour les petits écrans */
+  }
+  .home__title {
+    font-size: 2rem; /* Taille de la police du titre pour petits écrans */
+  }
+  .home__buttons{
+    flex-direction: column; /* Orientation colonne pour les boutons */
+    row-gap: 1.5rem; /* Espacement entre les boutons */
+  }
+
+  .shop__container{
+    grid-template-columns: 160px; /* Grille à une colonne pour la boutique */
+    justify-content: center; /* Alignement centré */
+  }
+
+  .footer__content {
+    grid-template-columns: max-content; /* Une seule colonne pour le pied de page */
+  }
 }
 
-.shop__container{
-  grid-template-columns: 160px;
-  justify-content: center;
-}
-
-.footer__content {
-  grid-template-columns: max-content;
-}
-}
-
-/* For medium devices */
+/* Pour appareils moyens */
 @media screen and (min-width: 576px) {
-.home__container,
-.new__container,
-.care__container {
-  grid-template-columns: 400px;
-  justify-content: center;
-}
+  .home__container,
+  .new__container,
+  .care__container {
+    grid-template-columns: 400px; /* Grille à une colonne pour certains contenus */
+    justify-content: center; /* Alignement centré */
+  }
 
-.shop__container {
-  grid-template-columns: repeat(2, 160px);
-  justify-content: center;
-}
+  .shop__container {
+    grid-template-columns: repeat(2, 160px); /* Grille à deux colonnes pour la boutique */
+    justify-content: center; /* Alignement centré */
+  }
 
-.footer__content{
-  grid-template-columns: repeat(3, max-content);
-}
+  .footer__content{
+    grid-template-columns: repeat(3, max-content); /* Grille pour le pied de page */
+  }
 }
 
 @media screen and (min-width: 768px) {
   .nav__menu {
-    width: 50%;
+    width: 50%; /* Largeur de la navigation sur les écrans moyens */
   }
 
   .new__content {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr); /* Grille à deux colonnes pour les nouvelles */
+    column-gap: 4rem; /* Espacement entre colonnes */
   }
   .new__card:nth-child(even) {
-    transform: translateY(10rem);
+    transform: translateY(10rem); /* Déplacement des cartes paires vers le bas */
   }
 
   .shop__container {
-    grid-template-columns: repeat(3, 160px);
+    grid-template-columns: repeat(3, 160px); /* Grille à trois colonnes pour la boutique */
   }
 
   .footer__container{
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
+    grid-template-columns: repeat(2, max-content); /* Grille pour le pied de page */
+    justify-content: space-between; /* Espacement entre les colonnes */
   }
 }
 
-/* For large devices */
+/* Pour grands appareils */
 @media screen and (min-width: 1150px) {
-.container {
-  margin-inline: auto;
-}
+  .container {
+    margin-inline: auto; /* Marge automatique pour centrer le conteneur */
+  }
 
-.section {
-  padding-block: 7rem 2rem;
-}
+  .section {
+    padding-block: 7rem 2rem; /* Espacement supérieur et inférieur pour les sections */
+  }
 
-.section__title {
-  margin-bottom: 1.5rem;
-}
+  .section__title {
+    margin-bottom: 1.5rem; /* Marge inférieure pour le titre de section */
+  }
 
-.nav {
-  height: calc(var(--header-height) + 2rem);
-}
+  .nav {
+    height: calc(var(--header-height) + 2rem); /* Hauteur de la navigation ajustée */
+  }
 
-.nav__toggle,
-.nav__close {
-  display: none;
-}
+  .nav__toggle,
+  .nav__close {
+    display: none; /* Cacher les éléments de toggle et close */
+  }
 
-.nav__logo i{
-  font-size: 1.5rem;
-}
-.nav__menu {
-  width: initial;
-}
+  .nav__logo i{
+    font-size: 1.5rem; /* Taille de police pour l'icône du logo */
+  }
+  .nav__menu {
+    width: initial; /* Réinitialiser la largeur du menu */
+  }
 
-.nav__list {
-  flex-direction: row;
-  column-gap: 3.5rem;
-}
+  .nav__list {
+    flex-direction: row; /* Orientation horizontale de la liste de navigation */
+    column-gap: 3.5rem; /* Espacement entre les éléments */
+  }
 
-.nav__actions {
-  font-size: 1.5rem;
-  column-gap: 1rem;
-}
+  .nav__actions {
+    font-size: 1.5rem; /* Taille de police pour les actions de navigation */
+    column-gap: 1rem; /* Espacement entre les actions */
+  }
 
-.home__title {
-  font-size: 3.5rem;
-}
+  .home__title {
+    font-size: 3.5rem; /* Taille de police pour le titre d'accueil */
+  }
 
-.home__container {
-  grid-template-columns: 480px 535px;
-  align-items: center;
-  column-gap: 4rem;
-  padding-top: 4rem;
-}
+  .home__container {
+    grid-template-columns: 480px 535px; /* Grille pour le conteneur d'accueil */
+    align-items: center; /* Alignement centré */
+    column-gap: 4rem; /* Espacement entre les colonnes */
+    padding-top: 4rem; /* Espacement supérieur */
+  }
 
-.home__img {
-  width: 480px;
-}
-.home__data {
-  text-align: initial;
-}
-.home__description {
-  margin-bottom: 4.5rem;
-}
-.home__buttons{
-  justify-content: initial;
-  column-gap: 1.5rem;
-}
+  .home__img {
+    width: 480px; /* Largeur de l'image d'accueil */
+  }
+  .home__data {
+    text-align: initial; /* Alignement du texte à gauche */
+  }
+  .home__description {
+    margin-bottom: 4.5rem; /* Marge inférieure pour la description */
+  }
+  .home__buttons{
+    justify-content: initial; /* Alignement des boutons à leur emplacement initial */
+    column-gap: 1.5rem; /* Espacement entre les boutons */
+  }
 
-.new__container {
-  grid-template-columns: 412px 490px;
-  align-items: center;
-  column-gap: 7.5rem;
-}
+  .new__container {
+    grid-template-columns: 412px 490px; /* Grille pour le conteneur des nouvelles */
+    align-items: center; /* Alignement centré */
+    column-gap: 7.5rem; /* Espacement entre les colonnes */
+  }
 
-.new__data,
-.new__data .section__title {
-  text-align: initial;
-}
+  .new__data,
+  .new__data .section__title {
+    text-align: initial; /* Alignement du texte à gauche */
+  }
 
-.new__content {
-  row-gap: 8.5rem;
-}
+  .new__content {
+    row-gap: 8.5rem; /* Espacement entre lignes dans le contenu */
+  }
 
-.new__title {
-  font-size: var(--h3-font-size);
-}
+  .new__title {
+    font-size: var(--h3-font-size); /* Taille de police pour le titre des nouvelles */
+  }
 
-.shop__container {
-  grid-template-columns: repeat(3, 240px);
-  gap: 8.5rem 4rem;
-  padding-top: 7.5rem;
-}
+  .shop__container {
+    grid-template-columns: repeat(3, 240px); /* Grille à trois colonnes pour la boutique */
+    gap: 8.5rem 4rem; /* Espacement entre lignes et colonnes */
+    padding-top: 7.5rem; /* Espacement supérieur */
+  }
 
-.shop__card {
-  padding: 10.5rem 1.5rem 2rem;
-  border-radius: 1.5rem;
-}
+  .shop__card {
+    padding: 10.5rem 1.5rem 2rem; /* Espacement intérieur pour la carte de boutique */
+    border-radius: 1.5rem; /* Coins arrondis */
+  }
 
-.shop__img {
-  width: 210px;
-  top: -5.5rem;
-}
+  .shop__img {
+    width: 210px; /* Largeur de l'image de la carte de boutique */
+    top: -5.5rem; /* Alignement vers le haut */
+  }
 
-.shop__title {
-  font-size: var(--h3-font-size);
-}
+  .shop__title {
+    font-size: var(--h3-font-size); /* Taille de la police pour le titre de la boutique */
+  }
 
-.shop__price {
-  font-size: var(--h2-font-size);
-}
+  .shop__price {
+    font-size: var(--h2-font-size); /* Taille de la police pour le prix */
+  }
 
-.shop__button {
-  right: 1.5rem;
-  bottom: 2rem;
-  font-size: 1.5rem;
-}
+  .shop__button {
+    right: 1.5rem; /* Alignement à droite */
+    bottom: 2rem; /* Alignement en bas */
+    font-size: 1.5rem; /* Taille de police pour le bouton */
+  }
 
-.care__container {
-  grid-template-columns: 480px 385px;
-  align-items: center;
-  column-gap: 8rem;
-  padding-top: 3rem;
-}
+  .care__container {
+    grid-template-columns: 480px 385px; /* Grille pour le conteneur de soins */
+    align-items: center; /* Alignement centré */
+    column-gap: 8rem; /* Espacement entre les colonnes */
+    padding-top: 3rem; /* Espacement supérieur */
+  }
 
-.care__img {
-  width: 480px;
-}
+  .care__img {
+    width: 480px; /* Largeur de l'image de soins */
+  }
 
-.care__list{
-  row-gap: 1.5rem;
-}
+  .care__list{
+    row-gap: 1.5rem; /* Espacement entre lignes pour la liste des soins */
+  }
 
-.contact__container {
-  grid-template-columns: 280px 480px;
-  justify-content: center;
-  align-items: center;
-  column-gap: 8rem;
-  padding-block: 3rem;
-}
+  .contact__container {
+    grid-template-columns: 280px 480px; /* Grille pour le conteneur de contact */
+    justify-content: center; /* Alignement centré */
+    align-items: center; /* Alignement vertical centré */
+    column-gap: 8rem; /* Espacement entre colonnes */
+    padding-block: 3rem; /* Espacement supérieur et inférieur */
+  }
 
-.contact__content {
-  order: -1;
-  text-align: center;
-  row-gap: 2.5rem;
-}
-.contact__social {
-  justify-content: initial;
-}
+  .contact__content {
+    order: -1; /* Changer l'ordre des éléments */
+    text-align: center; /* Alignement du texte au centre */
+    row-gap: 2.5rem; /* Espacement entre lignes */
+  }
+  .contact__social {
+    justify-content: initial; /* Alignement des icônes de réseaux sociaux à l'initial */
+  }
 
-.contact__img {
-  width: 480px;
-}
+  .contact__img {
+    width: 480px; /* Largeur de l'image de contact */
+  }
 
-.footer__logo {
-  margin-bottom: 1.5rem;
-}
+  .footer__logo {
+    margin-bottom: 1.5rem; /* Marge inférieure pour le logo du pied de page */
+  }
 
-.footer__logo i {
-  font-size: 2rem;
-}
+  .footer__logo i {
+    font-size: 2rem; /* Taille de police pour l'icône du logo */
+  }
 
-.footer__content {
-  column-gap: 5.5rem;
-}
+  .footer__content {
+    column-gap: 5.5rem; /* Espacement entre les colonnes du pied de page */
+  }
 
-.footer__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: 1.5rem;
-}
+  .footer__title {
+    font-size: var(--h3-font-size); /* Taille de police pour le titre du pied de page */
+    margin-bottom: 1.5rem; /* Marge inférieure pour le titre */
+  }
 
-.footer__social {
-  column-gap: 1rem;
-}
+  .footer__social {
+    column-gap: 1rem; /* Espacement entre les icônes de réseaux sociaux */
+  }
 
-.footer__copy {
-  margin-top: 7.5rem;
-}
+  .footer__copy {
+    margin-top: 7.5rem; /* Marge supérieure pour le texte du copyright */
+  }
 
-.scrollup {
-  right: 6px;
-}
-
+  .scrollup {
+    right: 6px; /* Positionnement à droite pour le bouton de retour en haut */
+  }
 }
